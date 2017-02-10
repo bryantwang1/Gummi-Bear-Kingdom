@@ -8,13 +8,13 @@
 <h2>Products of Gummi Bear Kingdom</h2>
 
 <div class="row">
-    <div class="col-4">
+    <div class="col-3">
         <p>Product Name</p>
     </div>
-    <div class="col-4">
-        <p>Product Cost(in Choc. Coins)</p>
+    <div class="col-2">
+        <p>Cost(in cc)</p>
     </div>
-    <div class="col-4">
+    <div class="col-3">
         <p>Country of Origin</p>
     </div>
 </div>
@@ -22,14 +22,19 @@
 @foreach(var product in Model)
 {
     <div class="row">
-        <div class="col-4">
+        <div class="col-3">
             @Html.DisplayFor(modelProduct => product.Name)
         </div>
-        <div class="col-4">
+        <div class="col-2">
             @Html.DisplayFor(modelProduct => product.Cost)
         </div>
-        <div class="col-4">
+        <div class="col-3">
             @Html.DisplayFor(modelProduct => product.Country)
+        </div>
+        <div class="col-4">
+            @Html.ActionLink("Details", "Details", new { id = product.ProductId })
         </div>
     </div>
 }
+
+<p><a asp-action="Create">Add a Product</a></p>
