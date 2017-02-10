@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Gummi Bear Kingdom Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<GummiBearKingdom.Models.Product>
+
+<h2>Products of Gummi Bear Kingdom</h2>
+
+<div class="row">
+    <div class="col-4">
+        <p>Product Name</p>
+    </div>
+    <div class="col-4">
+        <p>Product Cost(in Choc. Coins)</p>
+    </div>
+    <div class="col-4">
+        <p>Country of Origin</p>
+    </div>
+</div>
+
+@foreach(var product in Model)
+{
+    <div class="row">
+        <div class="col-4">
+            @Html.DisplayFor(modelProduct => product.Name)
+        </div>
+        <div class="col-4">
+            @Html.DisplayFor(modelProduct => product.Cost)
+        </div>
+        <div class="col-4">
+            @Html.DisplayFor(modelProduct => product.Country)
+        </div>
+    </div>
+}
