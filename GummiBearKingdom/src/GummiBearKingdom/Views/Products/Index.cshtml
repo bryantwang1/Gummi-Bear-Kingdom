@@ -32,7 +32,8 @@
             @Html.DisplayFor(modelProduct => product.Country)
         </div>
         <div class="col-4">
-            @Html.ActionLink("Details", "Details", new { id = product.ProductId })
+            <a asp-action="Details" asp-route-id="@product.ProductId">Details</a> |
+            <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a>
         </div>
     </div>
 }
