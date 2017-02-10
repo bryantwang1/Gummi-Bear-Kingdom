@@ -10,9 +10,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using WorldTravelBlog.Models;
+using GummiBearKingdom.Models;
 
-namespace WorldTravelBlog
+namespace GummiBearKingdom
 {
     public class Startup
     {
