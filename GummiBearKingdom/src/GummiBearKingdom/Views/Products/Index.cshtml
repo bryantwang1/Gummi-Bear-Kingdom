@@ -21,6 +21,7 @@
 
 @foreach(var product in Model)
 {
+    <div class="loop-divider"></div>
     <div class="row">
         <div class="col-3">
             @Html.DisplayFor(modelProduct => product.Name)
@@ -33,7 +34,8 @@
         </div>
         <div class="col-4">
             <a asp-action="Details" asp-route-id="@product.ProductId">Details</a> |
-            <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a>
+            <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a> |
+            <a asp-action="Delete" asp-route-id="@product.ProductId">Delete</a>
         </div>
     </div>
 }
