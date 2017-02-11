@@ -1,0 +1,26 @@
+﻿body {
+    overflow-x: hidden;
+}
+
+.home-content-block {
+    margin:0 calc(50% - 50vw);
+}
+
+.home-content-block h1 {
+    text-align: center;
+}
+
+.paragraph-block {
+    height: 70vh;
+    width: 100vw;
+    padding: 8vw 8vw;
+    padding-top: 10vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.paragraph-block p {
+    font-size: 1.4em;
+    font-weight:600;
+}
+

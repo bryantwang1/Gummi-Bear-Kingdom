@@ -8,6 +8,18 @@ h2 {
     margin-bottom: 2%;
 }
 
+.animation-block {
+    opacity: 0;
+}
+
+.animation-block.fade-in {
+    transition: all 0.5s linear;
+}
+
+.animation-block.fade-in.in-view {
+    opacity: 1;
+}
+
 .custom-header {
     background-color: aquamarine;
     height: 150px;
@@ -137,9 +149,6 @@ a:hover {
     background-color: deeppink;
 }
 
-
-
-
 @media screen and (min-width: 1200px) {
     .product-block {
         width: 25%;
@@ -179,3 +188,24 @@ a:hover {
     width: 100%;
     margin-bottom: 5%;
 }
+
+.animation-block.slide-left {
+    transition: all 0.6s ease-in;
+    transform: translate3d(-200px, 0px, 0px);
+}
+
+.animation-block.slide-left.in-view {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.animation-block.slide-right {
+    transition: all 0.6s ease-in;
+    transform: translate3d(200px, 0px, 0px);
+}
+
+.animation-block.slide-right.in-view {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
