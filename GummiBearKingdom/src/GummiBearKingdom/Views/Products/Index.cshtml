@@ -6,38 +6,25 @@
 @model IEnumerable<GummiBearKingdom.Models.Product>
 
 <h2>Products of Gummi Bear Kingdom</h2>
+<p><a asp-action="Create">Add a Product</a></p>
 
 <div class="row">
-    <div class="col-3">
-        <p>Product Name</p>
-    </div>
-    <div class="col-2">
-        <p>Cost(in cc)</p>
-    </div>
-    <div class="col-3">
-        <p>Country of Origin</p>
-    </div>
+    @{int i = 0;}
+    @foreach(var product in Model)
+    {
+        i++;
+        <div class="product-block block-@i">
+            <div class="product-flexer">
+                <div class="product-text-container">
+                    <p>@product.Name</p>
+                </div>
+            </div>
+            <div class="slide-upper">
+                <a asp-action="Details" asp-route-id="@product.ProductId">Details</a> | 
+                <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a> | 
+                <a asp-action="Delete" asp-route-id="@product.ProductId">Delete</a>
+            </div>
+        </div>
+    }
 </div>
-
-@foreach(var product in Model)
-{
-    <div class="loop-divider"></div>
-    <div class="row">
-        <div class="col-3">
-            @Html.DisplayFor(modelProduct => product.Name)
-        </div>
-        <div class="col-2">
-            @Html.DisplayFor(modelProduct => product.Cost)
-        </div>
-        <div class="col-3">
-            @Html.DisplayFor(modelProduct => product.Country)
-        </div>
-        <div class="col-4">
-            <a asp-action="Details" asp-route-id="@product.ProductId">Details</a> |
-            <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a> |
-            <a asp-action="Delete" asp-route-id="@product.ProductId">Delete</a>
-        </div>
-    </div>
-}
-
-<p><a asp-action="Create">Add a Product</a></p>
+<div class="bottom-filler"></div>

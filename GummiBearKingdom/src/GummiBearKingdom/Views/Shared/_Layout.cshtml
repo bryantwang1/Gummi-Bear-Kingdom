@@ -16,8 +16,29 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <h1>Gummi Bear Kingdom</h1>
-    <h4>@Html.ActionLink("Home", "Index", "Home") | @Html.ActionLink("Products", "Index", "Products")</h4>
+    <div class="custom-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <h1>Gummi Bear Kingdom</h1>
+                </div>
+                <div class="col-3">
+                    <div class="nav-flexer">
+                        <h4>
+                            <a asp-action="Index" asp-controller="Home">Home</a>
+                        </h4>
+                        <div class="header-link-divider h4"> | </div>
+                        <h4>
+                            <a asp-action="Index" asp-controller="Products">Products</a>
+                        </h4>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
     <div class="container">
         @RenderBody()
     </div>
