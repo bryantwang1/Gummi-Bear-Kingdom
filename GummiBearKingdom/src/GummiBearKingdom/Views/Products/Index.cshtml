@@ -13,6 +13,7 @@
     @foreach(var product in Model)
     {
         i++;
+        i = i > 7 ? 1 : i;
         <div class="product-block block-@i">
             <div class="product-flexer">
                 <div class="product-text-container">

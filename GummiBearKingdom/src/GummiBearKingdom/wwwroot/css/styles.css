@@ -32,8 +32,8 @@ h2 {
 }
 
 .header-link-divider {
-    margin-left: 0.5%;
-    margin-right: 0.5%;
+    margin-left: 3%;
+    margin-right: 1%;
     height: 24px;
     overflow: hidden;
 }
@@ -139,11 +139,6 @@ a:hover {
 
 
 
-@media screen and (max-width: 768px) {
-    .product-block {
-        width: 100%;
-    }
-}
 
 @media screen and (min-width: 1200px) {
     .product-block {
@@ -155,11 +150,29 @@ a:hover {
 @media screen and (max-width: 1000px) {
 
     .custom-header h1 {
+        font-size: 3em;
+        padding-top: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-block {
+        width: 100%;
+    }
+
+    .custom-header h1 {
         font-size: 2em;
         padding-top: 31px;
     }
+
+    .nav-flexer a {
+        font-size: 0.9em;
+    }
+
+    a:hover {
+        font-size: 1.1em;
+    }
 }
-    
 
 .subheader-divider {
     border: 1px solid black;
